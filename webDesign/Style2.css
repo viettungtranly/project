@@ -1,0 +1,128 @@
+/* Tổng quan trang và màu nền chủ đạo */
+body {
+    background-color: #9acd32; /* Màu xanh lá đặc trưng từ trang 1 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Skip to Main Content Link (Yêu cầu 3) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Header & Navigation (Yêu cầu 4, 7 - Dùng Flexbox) */
+header {
+    background-color: #222;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #9acd32;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+/* Hiệu ứng Hover (Yêu cầu 8) */
+nav a:hover {
+    color: #fff;
+    background-color: #444;
+    border-radius: 4px;
+}
+
+/* Tiêu đề trang */
+h1.page-title {
+    color: #222;
+    text-align: center;
+    margin: 30px 0 10px 0;
+}
+
+p.page-desc {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Bố cục Grid cho danh sách (Yêu cầu 6 - Ít nhất 2 cột) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+/* Thẻ Card cho mỗi mục */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/* Style cho ảnh (Yêu cầu 1, 5, 9 - Box Model & nth-child) */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 3px solid #333;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng hover cho ảnh */
+.card img:hover {
+    transform: scale(1.03);
+}
+
+/* Sử dụng nth-child để tạo border-radius độc đáo cho từng ảnh (Yêu cầu 9) */
+.card:nth-child(1) img {
+    border-radius: 15px 50px 15px 50px;
+}
+.card:nth-child(2) img {
+    border-radius: 50px 15px 50px 15px;
+}
+.card:nth-child(3) img {
+    border-radius: 30px;
+}
+.card:nth-child(4) img {
+    border-radius: 50%;
+}
+.card:nth-child(5) img {
+    border-radius: 10px 40px;
+}
+
+/* Chữ trong card */
+.card h3 {
+    color: #fff;
+    margin: 15px 0 5px 0;
+}
+
+.card p {
+    color: #bbb;
+    font-size: 14px;
+    margin: 0;
+}
