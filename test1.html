@@ -8,7 +8,7 @@
     <script src="jsFile.js"></script>
 </head>
 
-<body>
+<body onload="addTabIndex()">
 
     <div id="image">
         Hover over an image below to display here.
@@ -16,14 +16,27 @@
 
     <img class="preview" alt="Styling with a Bandana"
         src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" onmouseover="upDate(this)"
-        onmouseout="unDo()">
+        onmouseout="unDo()" onfocus="Focus(this)" onblur="Blur(this)">
 
     <img class="preview" alt="With My Boy" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG"
-        onmouseover="upDate(this)" onmouseout="unDo()">
+        onmouseover="upDate(this)" onmouseout="unDo()" onfocus="Focus(this)" onblur="Blur(this)">
 
     <img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" alt="Young Puppy"
-        onmouseover="upDate(this)" onmouseout="unDo()">
+        onmouseover="upDate(this)" onmouseout="unDo()" onfocus="Focus(this)" onblur="Blur(this)">
 
+    <img class="preview"
+        src="https://thanhnien.mediacdn.vn/Uploaded/hoalp/2021_07_30/billie-eilish-happier-than-ever_VFYN.jpeg?width=500"
+        alt="Billie Eilish" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="Focus(this)" onblur="Blur(this)">
+
+    <img class="preview"
+        src="https://thumb.wikimedia.org/wikipedia/vi/thumb/5/58/Scorpion_album_cua_Drake.jpg/250px-Scorpion_album_cua_Drake.jpg?utm_source=vi.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+        alt="Drake" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="Focus(this)" onblur="Blur(this)">
+
+    <img class="preview"
+        src="https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2026/5/27/sombr-3-1779868699118938595536.jpeg"
+        alt="Sombr" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="Focus(this)" onblur="Blur(this)">
+
+    <button type="button" onclick="Delete()">Delete all images</button>
 </body>
 
 </html>
